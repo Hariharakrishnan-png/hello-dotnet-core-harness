@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_Hariharakrishnan_png_hello_dotnet_core_harness_1705008146400-pr-trigger-input-set
+  identifier: Build_Hariharakrishnan_png_hello_dotnet_core_harness_1705008146400prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Sample_net_project
+  pipeline:
+    identifier: Build_Hariharakrishnan_png_hello_dotnet_core_harness_1705008146400
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
