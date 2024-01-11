@@ -1,0 +1,33 @@
+pipeline:
+  identifier: Build_Hariharakrishnan_png_hello_dotnet_core_harness_1705008146400
+  name: Build hello-dotnet-core-harness
+  orgIdentifier: default
+  projectIdentifier: Sample_net_project
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1705008125178
+        repoName: Hariharakrishnan-png/hello-dotnet-core-harness
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
